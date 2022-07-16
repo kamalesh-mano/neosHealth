@@ -1,0 +1,6 @@
+export const ActionTypes = {
+    ADD_TASK: "ADD_TASK",
+    REMOVE_TASK: "REMOVE_TASK",
+    MOVE_TO_CURRENT: "MOVE_TO_CURRENT",
+    MOVE_TO_COMPLETED:"MOVE_TO_COMPLETED"
+}

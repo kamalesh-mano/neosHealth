@@ -1,38 +1,267 @@
-.App {
+body{
+  background-color: #282c34;
+  
+}
+.removeButton{
+  color: rgb(230, 70, 70);
+  font-size: 1em;
+  background:none; 
+  border:none;  ;
+}
+.removeButton:hover{
+  color: red;
+  font-size:28px;
+}
+::placeholder {
+  color: #9ecaed;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.taskColumnHeader{
+  color: black;
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.taskNameInput{
+  margin-top: 10px;
+  height: 35px;
+  width: 500px;
+  font-size: 18px;
+  color: orange;
+  text-align: center;
+  border: 2px solid #dadada;
+  border-radius: 7px;
   background-color: #282c34;
-  min-height: 100vh;
+}
+.taskNameInput:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 80px #9ecaed;
+}
+.addTaskForm{
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 250px;
+}
+.formContainer{
+  margin: 0 auto;
+  width: 75vw;
+  margin-top: 50px;
+  background-color: #545a65;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+.taskContainer {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap:25px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.taskColumn{
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  overflow-y:auto;
+  overflow-x:auto;
+  max-height: 390px;
+  min-height: 400px;
+  min-width: 250px;
+  border-radius: 15px;
+  align-items: center;
+
+}
+.datePickerTimer{
+  width: 250px;
+  background-color: #282c34;
+  height: 35px;
+  border-radius: 7.5px;
+  margin: 10px;
+  text-align: center;
+  color: orange;
+}
+.datePickerTimer:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 80px #9ecaed;
+}
+.AddTaskButton {
+  width: 145px;
+  height: 35px;
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(141, 141, 226);
+  border-radius: 7px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddTaskButton:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 45px #9ecaed;
+}
+.CheckButton{
+  font-size: 1em;
+  background:none; 
+  border:none;  ;
+}
+.CheckButton:hover{
+  text-shadow: 0 0 1em hsl(0 0% 100% / 0.3), 0 0 0.45em greenyellow;
+  font-size: 28px;
+}
+.moveToNewButton{
+  font-size: 2em;
+  color:red;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+.moveToNewButton:hover{
+  text-shadow: 0 0 1em hsl(0 0% 100% / 0.3), 0 0 0.45em red;
+  font-size: 28px;
+}
+.spanClass{
+  float: right;
+  margin-right: 10px;
+}
+ul{
+  list-style-type: none;
+  padding: 0px;
+}
+.taskColumn li{
+  text-align: center;
+  min-width: 180px;
+  margin-top:5px;
+  color: black;
+  background: whitesmoke;
+  border-radius: 7px;
+  min-height:40px;
+}
+.toNewTask{
+  color: red;
+  cursor: pointer;
+  font-size: 24px;
+  float: left;
+  margin-left: 15px;
+  font-size: 1em;
+  background:none; 
+  border:none;  ;
+}
+.toNewTask:hover{  
+  font-size: 30px;
+}
+.toCompletedTask{
+  color: rgb(72, 232, 72);
+  font-size: 1em;
+  background:none; 
+  border:none;  ;
+  font-size: 24px;
+  float: right;
+  margin-right: 15px;
+}
+.toCompletedTask:hover{  
+  font-size: 30px;
+}
+
+.missedTimer{
+  background-color: rgb(201, 59, 59);
+}
+.successTimer{
+  background-color: rgb(47, 221, 119);
+}
+.lightMode{
+  background-color: whitesmoke;
+}
+.lightModeTask{
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(234, 132, 149);
+  overflow-y:auto;
+  overflow-x:auto;
+  max-height: 390px;
+  min-height: 400px;
+  min-width: 250px;
+  border-radius: 15px;
+  align-items: center;
+}
+.lightModeForm{
+  margin: 0 auto;
+  width: 75vw;
+  margin-top: 50px;
+  background-color: #9bd2ff;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+.lightModetaskName{
+  font-style: italic;
+  margin-top: 10px;
+  height: 35px;
+  width: 500px;
+  font-size: 18px;
+  color: rgb(185, 46, 106);
+  text-align: center;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  background-color: whitesmoke;
+}
+.lightModeAddTask{
+  width: 145px;
+  height: 35px;
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(185, 46, 106);
+  border-radius: 7px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.lightModeAddTask:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 45px #9ecaed;
+}
+.modeToggler{
+  right: 40px;
+  position: absolute;
+}
+.neon-button{
+  color: whitesmoke;
+  background: hsl(317 100% 54%);
+  padding:10px;
+  border-radius: 10px;
+ 
+}
+
+
+.neon-button:hover{
+  background-color: #282c34;
+  border: 1px solid hsl(317 100% 54%);
+  color: hsl(317 100% 54%);
+  text-shadow: none;
+  padding:15px;
+  box-shadow: 0 0 80px hsl(317 100% 54%);
+}
+.lightModetaskHeader{
+  font-style: italic;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.dark-Button{
+  color: whitesmoke;
+  background: #282c34;
+  padding:10px;
+  border-radius: 10px;
 }
